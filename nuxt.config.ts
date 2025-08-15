@@ -22,10 +22,16 @@ export default defineNuxtConfig({
     prefix: '',
     componentDir: './app/components/ui'
   },
+  ssr: true,
   nitro: {
+    preset: 'github-pages',
     prerender: {
       crawlLinks: true,
-      routes: ['/404'], // don't prerender `/`
+      routes: ['/', '/404'], // don't prerender `/`
     }
+  },
+  app: {
+    // ✅ Needed for GitHub Pages routing
+    baseURL: '/shad-cn-project/', // replace with your repo name
   }
 })

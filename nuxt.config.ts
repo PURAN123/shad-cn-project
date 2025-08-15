@@ -27,7 +27,14 @@ export default defineNuxtConfig({
     preset: 'github-pages',
     prerender: {
       crawlLinks: true,
-      routes: ['/', '/404'], // don't prerender `/`
+      routes: ['/']
+    }
+  },
+  app: {
+    head: {
+      htmlAttrs: {
+        lang: 'en'
+      }
     }
   }
 })

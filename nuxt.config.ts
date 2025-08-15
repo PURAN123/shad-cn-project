@@ -22,4 +22,10 @@ export default defineNuxtConfig({
     prefix: '',
     componentDir: './app/components/ui'
   },
+  nitro: {
+    prerender: {
+      crawlLinks: true,
+      routes: ['/404'], // don't prerender `/`
+    }
+  }
 })

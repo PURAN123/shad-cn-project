@@ -31,7 +31,7 @@ export default defineNuxtConfig({
     }
   },
   app: {
-    baseURL: '/',
+    baseURL: '/shad-cn-project/',
     head: {
       htmlAttrs: {
         lang: 'en'

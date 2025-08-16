@@ -25,7 +25,7 @@ jobs:
 
       - name: Build Nuxt app for GitHub Pages
         run: |
-          NUXT_APP_BASE_URL=/${{ github.event.repository.name }} npx nuxt build --preset github_pages
+          NUXT_APP_BASE_URL=/${{ github.event.repository.name }} npx nuxt generate --preset github_pages
 
       - name: Upload build output
         uses: actions/upload-pages-artifact@v3

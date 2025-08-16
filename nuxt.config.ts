@@ -41,5 +41,11 @@ export default defineNuxtConfig({
   routeRules: {
     // fallback for client-side routing
     '/**': { static: true }
+  },
+
+  runtimeConfig:{
+    public : {
+      apiBaseUrl: process.env.API_BASE_URL,
+    }
   }
 })

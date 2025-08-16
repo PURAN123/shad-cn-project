@@ -1,6 +1,6 @@
 <template>
     <p>Hello About, I am a about file</p>
-    <a href="/">Home</a>
+    <NuxtLink to="/">Home</NuxtLink>
     <TestCard />
     <p>pas</p>
 </template>

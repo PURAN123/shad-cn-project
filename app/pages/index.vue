@@ -1,7 +1,7 @@
 <template>
     <!-- <Hello /> -->
     <p class="text-red-500 text-3xl font-bold underline text-primary">Hello World I am a index file</p>
-    <a href="/about">About</a>
+    <NuxtLink to="/about">About</NuxtLink>
     <Button type="button" variant="default">Click me</Button>
     <ColorMode />
     <Button type="button" variant="secondary">Click me</Button>

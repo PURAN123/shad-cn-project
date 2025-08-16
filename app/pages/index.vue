@@ -5,6 +5,7 @@
     <Button type="button" variant="default">Click me</Button>
     <ColorMode />
     <Button type="button" variant="secondary">Click me</Button>
+    <Button type="button" variant="primary"  @click="navigateTo('/new-experts')">View Experts</Button>
 </template>
 
 <script setup>

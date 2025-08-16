@@ -37,5 +37,9 @@ export default defineNuxtConfig({
         lang: 'en'
       }
     }
+  },
+  routeRules: {
+    // fallback for client-side routing
+    '/**': { static: true }
   }
 })

@@ -10,9 +10,15 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      NUXT_PUBLIC_API_BASE_URL: "https://dj-dev.exlitem.com"
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
+
+      - name: Set environment variables
+        run: |
+          echo "NUXT_PUBLIC_API_BASE_URL=https://dj-dev.exlitem.com" >> .env
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -24,8 +30,10 @@ jobs:
         run: npm ci
 
       - name: Build Nuxt app for GitHub Pages
-        run: |
-          NUXT_APP_BASE_URL=/${{ github.event.repository.name }} npx nuxt generate --preset github_pages
+        run: npx nuxt generate --preset github_pages
+        env:
+          NUXT_APP_BASE_URL: /${{ github.event.repository.name }}
+          NUXT_PUBLIC_API_BASE_URL: "https://dj-dev.exlitem.com"
 
       - name: Upload build output
         uses: actions/upload-pages-artifact@v3

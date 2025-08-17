@@ -6,6 +6,7 @@
     <ColorMode />
     <Button type="button" variant="secondary">Click me</Button>
     <Button type="button" variant="primary"  @click="navigateTo('/new-experts')">View Experts</Button>
+    <NuxtLink to="/contact">Contact</NuxtLink>
 </template>
 
 <script setup>

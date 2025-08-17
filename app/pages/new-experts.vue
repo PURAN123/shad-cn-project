@@ -1,11 +1,11 @@
 <template>
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 py-6">
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 py-6">
         <Card v-for="expert in experts" :key="expert.uuid" class="overflow-hidden group hover:shadow-lg transition-shadow duration-300">
             <CardHeader class="relative space-y-4 pb-2">
                 <div class="flex items-center justify-between">
-                    <Avatar class="h-16 w-16 ring-2 ring-offset-2 ring-primary/10">
+                    <Avatar class="h-20 w-20 ring-2 ring-offset-2 ring-primary/10">
                         <AvatarImage :src="expert?.profile_image" alt="expert profile image" />
-                        <AvatarFallback class="text-lg font-medium bg-primary/5 capitalize">
+                        <AvatarFallback class="text-3xl font-medium bg-primary/5 uppercase">
                             {{expert.first_name?.charAt(0)}}{{expert.last_name?.charAt(0)}}
                         </AvatarFallback>
                     </Avatar>
@@ -14,7 +14,6 @@
                         expert.profile_claimed ? 'bg-green-100 text-green-700' : 'bg-yellow-100 text-yellow-700'
                     ]">
                         {{ expert?.profile_claimed ? 'Claimed' : 'Unclaimed' }}
-                        {{ expert.profile_claimed }}
                     </div>
                 </div>
                 <div class="space-y-1">
